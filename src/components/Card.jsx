@@ -1,5 +1,4 @@
 const Card = ({item}) => {
-  console.log(item)
   const {snippet,statistics} = item
   const views = Math.floor((statistics.viewCount)/1000)
   return (

@@ -1,13 +1,29 @@
 import { Provider } from "react-redux";
 import Body from "./components/Body";
-import Header from "./components/Header"
 import store from "./utils/store";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import CardsContainer from "./components/CardsContainer";
+import VideoContainer from "./components/VideoContainer";
+
+const appRouter = createBrowserRouter([{
+  path:'/',
+  element:<Body/>,
+  children:[
+    {
+      path:'/',
+      element:<CardsContainer/>
+    },
+    {
+      path:'/watch',
+      element:<VideoContainer/>
+    }
+  ]
+}])
 
 function App() {
   return (
     <Provider store={store}>
-      <Header />
-      <Body/>
+      <RouterProvider router={appRouter}/>
     </Provider>
   );
 }

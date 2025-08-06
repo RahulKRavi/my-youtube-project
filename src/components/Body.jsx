@@ -1,15 +1,21 @@
 import { useSelector } from "react-redux"
-import CardsContainer from "./CardsContainer"
 import SideBar from "./SideBar"
-import store from "../utils/store"
+import { Outlet } from "react-router-dom"
+import Header from "./Header"
+
+
 const Body = () => {
   const toggleState = useSelector(store => store.toggle.toggleState)
   return (
-    <main className="body-container">
-      {toggleState &&      <SideBar /> }
-      <CardsContainer/>
-    </main>
-  )
+    <>
+      <Header />
+      <main className="body-container">
+        {toggleState && <SideBar />}
+        <Outlet />
+      </main>
+    </>
+  );
+
 }
 
 export default Body
