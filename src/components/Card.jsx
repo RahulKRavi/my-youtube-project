@@ -1,8 +1,11 @@
+import { useSelector } from "react-redux";
+
 const Card = ({item}) => {
+  const toggleState = useSelector(store => store.toggle.toggleState)
   const {snippet,statistics} = item
   const views = Math.floor((statistics.viewCount)/1000)
   return (
-    <div className="card">
+    <div className={toggleState ? "card":"large-card"}>
       <img
         className="thumbnail"
         alt="video thumbnail"
