@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import SideBar from "../components/SideBar";
 
 const toggleSlice = createSlice({
   name: 'toggle',

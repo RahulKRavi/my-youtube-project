@@ -1,6 +1,6 @@
 import { Provider } from "react-redux";
 import Body from "./components/Body";
-import store from "./utils/store";
+import store from "./store/store";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CardsContainer from "./components/CardsContainer";
 import VideoContainer from "./components/VideoContainer";

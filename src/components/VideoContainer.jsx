@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { sideBarDeactive } from "../utils/toggleSlice";
+import { sideBarDeactive } from "../store/toggleSlice";
 import { useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
 

@@ -3,23 +3,21 @@ import { SEARCH_API } from "../utils/constants";
 
 const Search = () => {
   const [searchTxt, setSearchTxt] = useState("");
-  const getSearchData = async (searchTxt)=> {
-    const data = await fetch(SEARCH_API+searchTxt)
-    const json = await data.json()
-    console.log(json)
-  }
-  useEffect(()=>{
-    const timer = setTimeout(()=>getSearchData(searchTxt),2000)
-    return ()=>clearInterval(timer)
-  },[searchTxt])
+  const [suggestions, setSuggestions] = useState([])
+  const getSearchData = async (searchTxt) => {
+    const data = await fetch(SEARCH_API + searchTxt);
+    const json = await data.json();
+    setSuggestions(json[1])
+  };
+  useEffect(() => {
+    const timer = setTimeout(() => getSearchData(searchTxt), 200);
+    return () => clearTimeout(timer);
+  }, [searchTxt]);
 
-  function handleSearchQuery(e) {
-    setSearchTxt(e.target.value);
-  }
   return (
     <div className="header-center">
       <input
-        onChange={(e) => handleSearchQuery(e)}
+        onChange={(e) => setSearchTxt(e.target.value)}
         className="search-input"
         type="text"
         value={searchTxt}
@@ -30,6 +28,15 @@ const Search = () => {
           src="https://cdn-icons-png.flaticon.com/512/49/49116.png"
         />
       </button>
+      {suggestions.length > 0 && (
+        <ul className="suggestions-dropdown">
+          {suggestions.map((item, index) => (
+            <li key={index} className="suggestion-item">
+              {item}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };

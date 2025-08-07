@@ -3,7 +3,7 @@ import Card from "./Card";
 import { YOUTUBE_API } from "../utils/constants";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { sideBarActivate } from "../utils/toggleSlice";
+import { sideBarActivate } from "../store/toggleSlice";
 
 const CardsContainer = () => {
   const [videos,setVideos] = useState([])
