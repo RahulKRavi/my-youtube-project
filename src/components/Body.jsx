@@ -10,7 +10,7 @@ const Body = () => {
     <>
       <Header />
       <main className="body-container">
-        {toggleState && <SideBar />}
+        <SideBar />
         <Outlet />
       </main>
     </>

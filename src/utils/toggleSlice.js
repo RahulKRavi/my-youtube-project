@@ -12,9 +12,12 @@ const toggleSlice = createSlice({
     },
     sideBarDeactive:(state)=>{
       state.toggleState = false
+    },
+        sideBarActivate:(state)=>{
+      state.toggleState = true
     }
   }
 })
 
-export const { toggleSideBar, sideBarDeactive } = toggleSlice.actions
+export const { toggleSideBar, sideBarDeactive, sideBarActivate } = toggleSlice.actions
 export default toggleSlice.reducer

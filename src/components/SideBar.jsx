@@ -1,4 +1,8 @@
+import { useSelector } from "react-redux";
+
 const SideBar = () => {
+  const toggleState = useSelector(store => store.toggle.toggleState)
+  if(!toggleState) return null;
   return (
     <section className="side-bar">
       <ul className="sidebar-section">

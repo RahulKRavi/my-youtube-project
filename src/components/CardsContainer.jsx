@@ -2,18 +2,20 @@ import { useEffect, useState } from "react";
 import Card from "./Card";
 import { YOUTUBE_API } from "../utils/constants";
 import { Link } from "react-router-dom";
-
+import { useDispatch } from "react-redux";
+import { sideBarActivate } from "../utils/toggleSlice";
 
 const CardsContainer = () => {
   const [videos,setVideos] = useState([])
+  const dispatch = useDispatch()
   useEffect(()=>{
+    dispatch(sideBarActivate())
     getFetchedData()
   },[])
 
  const getFetchedData = async ()=> {
    const data = await fetch(YOUTUBE_API);
    const jsonData = await data.json();
-   console.log(jsonData.items[0])
    setVideos(jsonData.items)
  }
 
