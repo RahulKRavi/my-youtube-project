@@ -1,6 +1,6 @@
 const Comments = () => {
-  return (<section>
-    This is the Comments component
+  return (<section className="comments-container">
+    Comments Only
   </section>)
 }
 

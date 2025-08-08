@@ -1,11 +1,8 @@
-import { useSelector } from "react-redux"
+import Header from "./Header"
 import SideBar from "./SideBar"
 import { Outlet } from "react-router-dom"
-import Header from "./Header"
-
 
 const Body = () => {
-  const toggleState = useSelector(store => store.toggle.toggleState)
   return (
     <>
       <Header />
@@ -15,7 +12,6 @@ const Body = () => {
       </main>
     </>
   );
-
 }
 
 export default Body

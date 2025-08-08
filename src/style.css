@@ -250,3 +250,44 @@ a {
 .suggestion-item:hover {
   background-color: #f2f2f2;
 }
+.video-only {
+  background-color: khaki;
+  width: 880px;
+}
+
+.comments-container {
+ background-color: goldenrod;
+}
+
+.chat-container {
+  background-color: hotpink;
+}
+
+.container {
+  display: flex;
+    width: 100vw; /* Full viewport width */
+  height: 100vh; /* Optional: Full height if needed */
+
+  align-items: flex-start; /* Align chat and video top-aligned */
+}
+
+.video-section {
+  display: flex;
+  flex-direction: column;
+  width: 880px;
+}
+
+.video-only {
+  background-color: khaki;
+  width: 100%; /* Take full width of .video-section */
+}
+
+.comments-container {
+  background-color: goldenrod;
+  width: 100%; /* Match .video-only width */
+}
+
+.chat-container {
+  background-color: hotpink;
+  flex-grow: 1; /* Take the remaining horizontal space */
+}
