@@ -131,7 +131,7 @@
 }
 
 .card {
-  width: 280px;
+  width: 340px;
   margin-bottom: 40px;
   cursor: pointer;
   margin-block: 1rem;
@@ -139,7 +139,7 @@
 }
 
 .large-card {
-  width: 340px;
+  width: 410px;
   margin-bottom: 40px;
   cursor: pointer;
   margin-block: 1rem;
@@ -235,7 +235,6 @@ a {
   background-color: #fff;
   border: 1px solid #ccc;
   border-top: none;
-  max-height: 200px;
   overflow-y: auto;
   list-style: none;
   padding: 0;
