@@ -1,9 +1,11 @@
 import { Provider } from "react-redux";
-import Body from "./components/Body";
 import store from "./store/store";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import CardsContainer from "./components/CardsContainer";
-import VideoContainer from "./components/VideoContainer";
+import Body from "./components/common/Body";
+import VideoGrid from "./components/Home/VideoGrid";
+import WatchPage from "./components/Watch/WatchPage";
+// import VideoGrid from "./components/home/VideoGrid";
+// import WatchPage from "./components/watch/WatchPage";
 
 const appRouter = createBrowserRouter([{
   path:'/',
@@ -11,11 +13,11 @@ const appRouter = createBrowserRouter([{
   children:[
     {
       path:'/',
-      element:<CardsContainer/>
+      element:<VideoGrid/>
     },
     {
       path:'/watch',
-      element:<VideoContainer/>
+      element:<WatchPage/>
     }
   ]
 }])

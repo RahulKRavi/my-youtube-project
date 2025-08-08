@@ -1,4 +1,4 @@
-const Video = ({id}) => {
+const PlayerSection = ({id}) => {
   return (
     <section className="video-only">
       <iframe
@@ -14,4 +14,4 @@ const Video = ({id}) => {
   );
 }
 
-export default Video
+export default PlayerSection

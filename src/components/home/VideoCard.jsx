@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 
-const Card = ({item}) => {
+const VideoCard = ({item}) => {
   const toggleState = useSelector(store => store.toggle.toggleState)
   const {snippet,statistics} = item
   const views = Math.floor((statistics.viewCount)/1000)
@@ -29,4 +29,4 @@ const Card = ({item}) => {
   );
 };
 
-export default Card;
+export default VideoCard;

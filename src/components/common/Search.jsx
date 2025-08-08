@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { SEARCH_API } from "../utils/constants";
+import { SEARCH_API } from "../../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
-import { addSuggestions } from "../store/searchSlice";
+import { addSuggestions } from "../../store/searchSlice";
 
 const Search = () => {
   const [searchTxt, setSearchTxt] = useState("");

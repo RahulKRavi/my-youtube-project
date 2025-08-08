@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
-import Card from "./Card";
-import { YOUTUBE_API } from "../utils/constants";
+import Card from "./VideoCard";
+import { YOUTUBE_API } from "../../utils/constants";
 import { Link } from "react-router-dom";
-import useCardsAPI from "../hooks/useCardsAPI";
+import useCardsAPI from "../../hooks/useCardsAPI";
 
-const CardsContainer = () => {
+const VideoGrid = () => {
 
   const videos = useCardsAPI(YOUTUBE_API)
 
@@ -17,4 +16,4 @@ const CardsContainer = () => {
   );
 };
 
-export default CardsContainer;
+export default VideoGrid;

@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { toggleSideBar } from "../store/toggleSlice.js";
+import { toggleSideBar } from "../../store/toggleSlice.js";
 import { Link } from "react-router-dom";
 import Search from "./Search.jsx";
 

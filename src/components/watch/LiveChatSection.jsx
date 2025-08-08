@@ -1,7 +1,7 @@
-const LiveChat = () => {
+const LiveChatSection = () => {
   return (<section>
     This is the LiveChat component
   </section>)
 }
 
-export default LiveChat
+export default LiveChatSection

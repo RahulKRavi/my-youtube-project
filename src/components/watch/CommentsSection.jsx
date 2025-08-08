@@ -1,7 +1,7 @@
-const Comments = () => {
+const CommentsSection = () => {
   return (<section className="comments-container">
     Comments Only
   </section>)
 }
 
-export default Comments
+export default CommentsSection
