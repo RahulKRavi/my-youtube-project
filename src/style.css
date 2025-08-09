@@ -291,3 +291,93 @@ a {
   background-color: hotpink;
   flex-grow: 1; /* Take the remaining horizontal space */
 }
+.comment-section {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.comment-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.comment {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.3s;
+}
+
+.comment:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.comment-author {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.comment-date {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.comment-text {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.live-chat-section {
+  width: 300px;
+  height: 500px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  padding: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  position: fixed;
+  right: 20px;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-message {
+  display: flex;
+  align-items: flex-start;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.chat-user-icon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.chat-user-name {
+  font-weight: bold;
+  margin-right: 6px;
+  color: #333;
+}
+
+.chat-user-message {
+  color: #444;
+  word-break: break-word;
+}

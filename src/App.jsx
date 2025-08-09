@@ -2,7 +2,7 @@ import { Provider } from "react-redux";
 import store from "./store/store";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Body from "./components/common/Body";
-import VideoGrid from "./components/Home/VideoGrid";
+import VideoGrid from "./components/home/VideoGrid";
 import WatchPage from "./components/Watch/WatchPage";
 // import VideoGrid from "./components/home/VideoGrid";
 // import WatchPage from "./components/watch/WatchPage";
