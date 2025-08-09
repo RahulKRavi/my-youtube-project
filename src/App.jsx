@@ -4,8 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Body from "./components/common/Body";
 import VideoGrid from "./components/home/VideoGrid";
 import WatchPage from "./components/Watch/WatchPage";
-// import VideoGrid from "./components/home/VideoGrid";
-// import WatchPage from "./components/watch/WatchPage";
+
 
 const appRouter = createBrowserRouter([{
   path:'/',
