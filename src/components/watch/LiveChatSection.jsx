@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { addMessage } from "../../store/liveChatSlice"
 import { generateRandomMessage, generateRandomName } from "../../utils/chatGenerator"
 // import ChatMessage from "./ChatMessage"
@@ -21,8 +21,14 @@ const ChatMessage = ({message}) => {
 
 const LiveChatSection = () => {
   const messages = useSelector(store=> store.liveChat.messages)
+  const [commentWritten,setCommentWritten] = useState('')
   const dispatch = useDispatch()
-  console.log(messages)
+  const handleComment = (commentWritten)=> {
+    dispatch(addMessage({
+      name: "Rahul",
+      text: commentWritten
+    }))
+  }
   useEffect(()=>{
     const i = setInterval(()=>{
       dispatch(addMessage({
@@ -38,7 +44,8 @@ const LiveChatSection = () => {
     {messages.map((item,index)=>(
       <ChatMessage message={item} key={index}/>
     ))}
-
+  <input type='text' value={commentWritten} onChange={(e)=>setCommentWritten(e.target.value)}></input>
+  <button onClick={()=>handleComment(commentWritten)}>Send</button>
   </section>)
 }
 

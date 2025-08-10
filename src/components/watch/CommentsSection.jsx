@@ -7,7 +7,8 @@ const Comment = ({comment})=> {
         <span className="comment-author">{comment.name}</span>
       </div>
       <p className="comment-text">{comment.commentTxt}</p>
-      
+      {comment.replies.length> 0 &&
+       comment.replies.map((item,index)=><Comment key={index} comment={item}/>)}
     </div>
   );
 }
@@ -17,7 +18,9 @@ const CommentsSection = () => {
   return (
     <section className="comments-container">
       <h2>Comments</h2>
-      <Comment comment={comments[0]}/>
+      {comments.length >0 && comments.map((item,index)=> {
+        return <Comment comment={item} key={index}/>
+      })}
     </section>
   );
 }
